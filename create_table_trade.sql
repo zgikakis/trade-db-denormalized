@@ -28,6 +28,6 @@ COMMENT ON COLUMN trade.qy_mo IS 'Quantity of trade for specified month and year
 COMMENT ON COLUMN trade.val_ytd IS 'Year to date value of trade for specified YYYY-MM';
 COMMENT ON COLUMN trade.qy_ytd IS 'Year to date quantity of trade for specified YYYY-MM';
 COMMENT ON COLUMN trade.unit_qy IS 'Quantity unit eg: KG';
-COMMENT ON COLUMN trade.direction IS 'Direction of the trade (import/export)';
+COMMENT ON COLUMN trade.direction IS 'Direction of the trade (imports_genral/imports_consumption/export)';
 COMMENT ON COLUMN trade.year IS 'Year';
 COMMENT ON COLUMN trade.month IS 'Month';

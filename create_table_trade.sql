@@ -1,6 +1,5 @@
 CREATE TABLE trade (
-	trade_id SERIAL PRIMARY KEY,
-    	hs_code VARCHAR(50),
+    	hs_code VARCHAR(20),
 	hs_sdesc VARCHAR(264),
 	hs_ldesc VARCHAR(264),
 	cty_code VARCHAR(10),
@@ -12,12 +11,12 @@ CREATE TABLE trade (
     	unit_qy VARCHAR(20),
 	direction VARCHAR(20),
     	year INT,
-	month INT);
+	month INT,
+	id VARCHAR(50) PRIMARY KEY;
 
 
 -- Add comments to the table and columns
 COMMENT ON TABLE trade IS 'trade table to store trade data from census.gov international trade data api.';
-COMMENT ON COLUMN trade.trade_id IS 'Serial primary key for trade table';
 COMMENT ON COLUMN trade.hs_code IS '10 digit HS code';
 COMMENT ON COLUMN trade.hs_sdesc IS 'Short description of commodity associated with HS code';
 COMMENT ON COLUMN trade.hs_ldesc IS 'Long description of commodity associated with HS code';
@@ -31,3 +30,4 @@ COMMENT ON COLUMN trade.unit_qy IS 'Quantity unit eg: KG';
 COMMENT ON COLUMN trade.direction IS 'Direction of the trade (imports_genral/imports_consumption/exports)';
 COMMENT ON COLUMN trade.year IS 'Year';
 COMMENT ON COLUMN trade.month IS 'Month';
+COMMENT ON COLUMN trade.id IS 'Primary key for trade table composed of YYYY_MO_ctycode_hscode_direction';

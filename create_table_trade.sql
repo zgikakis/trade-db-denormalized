@@ -12,7 +12,7 @@ CREATE TABLE trade (
 	direction VARCHAR(20),
     	year INT,
 	month INT,
-	id VARCHAR(50) PRIMARY KEY;
+	id VARCHAR(50) PRIMARY KEY);
 
 
 -- Add comments to the table and columns

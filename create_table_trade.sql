@@ -1,4 +1,4 @@
-CREATE TABLE trade (
+CREATE TABLE IF NOT EXISTS trade (
     	hs_code VARCHAR(20),
 	hs_sdesc VARCHAR(264),
 	hs_ldesc VARCHAR(264),
